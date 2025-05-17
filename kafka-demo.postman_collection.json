@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "8e7ee90c-a8a5-4972-a220-b23a404228b2",
+		"name": "kafka-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33221095"
+	},
+	"item": [
+		{
+			"name": "send-message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "This is a messgae to consumer"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sent-message-json",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":2,\r\n    \"firstName\":\"Jon\",\r\n    \"lastName\":\"Doe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/messages/json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"messages",
+						"json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"firstName\":\"mohamed\",\r\n    \"lastName\":\"amgad\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/wikimedia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"wikimedia"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
